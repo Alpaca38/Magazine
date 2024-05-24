@@ -92,9 +92,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="y0n-a7-DRN">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uW1-aT-buF">
+                                    <rect key="frame" x="8" y="22.666666666666671" width="329" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Jbm-ww-6ME"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyd-Vt-I7n">
+                                    <rect key="frame" x="345" y="22.666666666666671" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="PDM-gR-71J"/>
+                                        <constraint firstAttribute="height" constant="40" id="ey6-Z3-eZk"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Vyd-Vt-I7n" secondAttribute="trailing" constant="8" id="aMf-1S-Jda"/>
+                                <constraint firstItem="uW1-aT-buF" firstAttribute="leading" secondItem="y0n-a7-DRN" secondAttribute="leading" constant="8" id="cnH-V1-TpC"/>
+                                <constraint firstItem="Vyd-Vt-I7n" firstAttribute="leading" secondItem="uW1-aT-buF" secondAttribute="trailing" constant="8" id="dod-c7-P68"/>
+                                <constraint firstItem="uW1-aT-buF" firstAttribute="centerY" secondItem="y0n-a7-DRN" secondAttribute="centerY" id="gOC-mi-pFJ"/>
+                                <constraint firstItem="Vyd-Vt-I7n" firstAttribute="centerY" secondItem="y0n-a7-DRN" secondAttribute="centerY" id="nkm-Ij-NZP"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="146" id="CG2-6N-c12" customClass="RestaurantTableViewCell" customModule="Magazine" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="146"/>
+                                <rect key="frame" x="0.0" y="135" width="393" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CG2-6N-c12" id="ByM-Qp-O1o">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="146"/>
@@ -184,6 +214,10 @@
                             <outlet property="delegate" destination="ckZ-Oh-VGq" id="VmA-qi-zyu"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchButton" destination="Vyd-Vt-I7n" id="BFF-rH-Csp"/>
+                        <outlet property="searchTextField" destination="uW1-aT-buF" id="96L-hA-oZ6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZy-43-Bh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
