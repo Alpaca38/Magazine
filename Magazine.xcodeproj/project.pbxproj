@@ -13,6 +13,12 @@
 		D12E3C302C008422002B7634 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D12E3C2F2C008422002B7634 /* Base */; };
 		D12E3C322C008423002B7634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12E3C312C008423002B7634 /* Assets.xcassets */; };
 		D12E3C352C008423002B7634 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D12E3C342C008423002B7634 /* Base */; };
+		D12E3C3E2C008643002B7634 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C3D2C008643002B7634 /* Magazine.swift */; };
+		D12E3C412C0086F9002B7634 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D12E3C402C0086F9002B7634 /* Kingfisher */; };
+		D12E3C432C0087C5002B7634 /* Extension_Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C422C0087C5002B7634 /* Extension_Date.swift */; };
+		D12E3C452C00897E002B7634 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C442C00897E002B7634 /* MagazineTableViewController.swift */; };
+		D12E3C472C0089B1002B7634 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C462C0089B1002B7634 /* MagazineTableViewCell.swift */; };
+		D12E3C492C00946C002B7634 /* Extension_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C482C00946C002B7634 /* Extension_String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		D12E3C312C008423002B7634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D12E3C342C008423002B7634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D12E3C362C008423002B7634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D12E3C3D2C008643002B7634 /* Magazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
+		D12E3C422C0087C5002B7634 /* Extension_Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Date.swift; sourceTree = "<group>"; };
+		D12E3C442C00897E002B7634 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
+		D12E3C462C0089B1002B7634 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
+		D12E3C482C00946C002B7634 /* Extension_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12E3C412C0086F9002B7634 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,28 @@
 		D12E3C272C008422002B7634 /* Magazine */ = {
 			isa = PBXGroup;
 			children = (
+				D12E3C3C2C008636002B7634 /* Model */,
 				D12E3C282C008422002B7634 /* AppDelegate.swift */,
 				D12E3C2A2C008422002B7634 /* SceneDelegate.swift */,
 				D12E3C2C2C008422002B7634 /* ViewController.swift */,
+				D12E3C442C00897E002B7634 /* MagazineTableViewController.swift */,
+				D12E3C462C0089B1002B7634 /* MagazineTableViewCell.swift */,
 				D12E3C2E2C008422002B7634 /* Main.storyboard */,
 				D12E3C312C008423002B7634 /* Assets.xcassets */,
 				D12E3C332C008423002B7634 /* LaunchScreen.storyboard */,
 				D12E3C362C008423002B7634 /* Info.plist */,
+				D12E3C422C0087C5002B7634 /* Extension_Date.swift */,
+				D12E3C482C00946C002B7634 /* Extension_String.swift */,
 			);
 			path = Magazine;
+			sourceTree = "<group>";
+		};
+		D12E3C3C2C008636002B7634 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D12E3C3D2C008643002B7634 /* Magazine.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +108,9 @@
 			dependencies = (
 			);
 			name = Magazine;
+			packageProductDependencies = (
+				D12E3C402C0086F9002B7634 /* Kingfisher */,
+			);
 			productName = Magazine;
 			productReference = D12E3C252C008422002B7634 /* Magazine.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = D12E3C1C2C008422002B7634;
+			packageReferences = (
+				D12E3C3F2C0086F9002B7634 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D12E3C262C008422002B7634 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12E3C432C0087C5002B7634 /* Extension_Date.swift in Sources */,
 				D12E3C2D2C008422002B7634 /* ViewController.swift in Sources */,
+				D12E3C472C0089B1002B7634 /* MagazineTableViewCell.swift in Sources */,
+				D12E3C3E2C008643002B7634 /* Magazine.swift in Sources */,
+				D12E3C492C00946C002B7634 /* Extension_String.swift in Sources */,
+				D12E3C452C00897E002B7634 /* MagazineTableViewController.swift in Sources */,
 				D12E3C292C008422002B7634 /* AppDelegate.swift in Sources */,
 				D12E3C2B2C008422002B7634 /* SceneDelegate.swift in Sources */,
 			);
@@ -299,6 +335,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +343,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Jo.Magazine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,6 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +375,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Jo.Magazine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D12E3C3F2C0086F9002B7634 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D12E3C402C0086F9002B7634 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D12E3C3F2C0086F9002B7634 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D12E3C1D2C008422002B7634 /* Project object */;
 }
