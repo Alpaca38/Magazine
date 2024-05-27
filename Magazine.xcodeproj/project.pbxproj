@@ -22,6 +22,7 @@
 		D12E3C4B2C0099E8002B7634 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C4A2C0099E8002B7634 /* RestaurantTableViewController.swift */; };
 		D12E3C4D2C009A61002B7634 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C4C2C009A61002B7634 /* Restaurant.swift */; };
 		D12E3C4F2C009C1A002B7634 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C4E2C009C1A002B7634 /* RestaurantTableViewCell.swift */; };
+		D12E3C632C046E39002B7634 /* Extension_UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E3C622C046E39002B7634 /* Extension_UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D12E3C4A2C0099E8002B7634 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		D12E3C4C2C009A61002B7634 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D12E3C4E2C009C1A002B7634 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		D12E3C622C046E39002B7634 /* Extension_UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				D12E3C332C008423002B7634 /* LaunchScreen.storyboard */,
 				D12E3C362C008423002B7634 /* Info.plist */,
 				D12E3C422C0087C5002B7634 /* Extension_Date.swift */,
+				D12E3C622C046E39002B7634 /* Extension_UIViewController.swift */,
 				D12E3C482C00946C002B7634 /* Extension_String.swift */,
 			);
 			path = Magazine;
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12E3C632C046E39002B7634 /* Extension_UIViewController.swift in Sources */,
 				D12E3C4D2C009A61002B7634 /* Restaurant.swift in Sources */,
 				D12E3C432C0087C5002B7634 /* Extension_Date.swift in Sources */,
 				D12E3C2D2C008422002B7634 /* ViewController.swift in Sources */,
