@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdTableViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="AdTableViewCell" customModule="Magazine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJB-TP-ywm">
+                        <rect key="frame" x="40" y="16" width="240" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="xlr-fS-rQe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGg-NL-Fdx">
+                        <rect key="frame" x="283" y="2" width="35" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="0BC-o2-eRf"/>
+                            <constraint firstAttribute="height" constant="23" id="7ha-6I-6rP"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="AD"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JJB-TP-ywm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="FVZ-Dw-ID0"/>
+                    <constraint firstAttribute="bottom" secondItem="JJB-TP-ywm" secondAttribute="bottom" constant="16" id="RrT-Iy-GYd"/>
+                    <constraint firstItem="JJB-TP-ywm" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="UCK-Cy-gqU"/>
+                    <constraint firstItem="lGg-NL-Fdx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Uhz-9b-in5"/>
+                    <constraint firstAttribute="trailing" secondItem="lGg-NL-Fdx" secondAttribute="trailing" constant="2" id="kiN-fw-ry2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adButton" destination="lGg-NL-Fdx" id="jOa-iU-g7c"/>
+                <outlet property="titleLabel" destination="JJB-TP-ywm" id="EBF-lC-8cL"/>
+            </connections>
+            <point key="canvasLocation" x="196.94656488549617" y="20.070422535211268"/>
+        </tableViewCell>
+    </objects>
+</document>
