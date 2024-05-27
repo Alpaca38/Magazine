@@ -7,14 +7,15 @@
 
 import UIKit
 import Kingfisher
+import Cosmos
 
 class TouristSpotTableViewCell: UITableViewCell {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var likeButton: UIButton!
+    @IBOutlet var ratingView: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +27,6 @@ class TouristSpotTableViewCell: UITableViewCell {
         descriptionLabel.font = .systemFont(ofSize: 14)
         descriptionLabel.textColor = .darkGray
         descriptionLabel.numberOfLines = 0
-        scoreLabel.font = .systemFont(ofSize: 12)
-        scoreLabel.textColor = .lightGray
         mainImageView.layer.cornerRadius = 5
         mainImageView.contentMode = .scaleAspectFill
     }
@@ -35,7 +34,8 @@ class TouristSpotTableViewCell: UITableViewCell {
     func configure(data: Travel) {
         titleLabel.text = data.title
         descriptionLabel.text = data.description
-        scoreLabel.text = "평점 \(data.grade!) · 저장 \(data.save!.formatted())"
+        ratingView.rating = data.grade!
+        ratingView.text = "· 저장 \(data.save!.formatted())"
         let url = URL(string: data.travel_image!)
         mainImageView.kf.setImage(with: url)
         let imageName = data.like! ? "heart.fill" : "heart"
