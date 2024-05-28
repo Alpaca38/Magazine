@@ -22,7 +22,7 @@ class AdTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        contentView.backgroundColor = UIColor().random()
+        contentView.backgroundColor = UIColor.random()
     }
     
     override func layoutSubviews() {
@@ -33,7 +33,7 @@ class AdTableViewCell: UITableViewCell {
     
     func configureLayout() {
         contentView.layer.cornerRadius = 8
-        contentView.backgroundColor = UIColor().random()
+        contentView.backgroundColor = UIColor.random()
         
         titleLabel.font = .boldSystemFont(ofSize: 16)
         titleLabel.textAlignment = .center
