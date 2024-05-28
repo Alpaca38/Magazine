@@ -11,7 +11,7 @@ class DetailCityInfoViewController: UIViewController {
 
     @IBOutlet var detailTableView: UITableView!
     
-    var list = TravelInfo().travel
+    var list = TravelInfo.travel
     
     override func viewDidLoad() {
         super.viewDidLoad()

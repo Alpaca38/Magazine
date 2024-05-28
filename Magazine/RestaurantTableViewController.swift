@@ -12,7 +12,7 @@ class RestaurantTableViewController: UITableViewController {
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var searchButton: UIButton!
     
-    var list = RestaurantList().restaurantArray
+    var list = RestaurantList.restaurantArray
     var filteredList: [Restaurant] = []
 
     override func viewDidLoad() {

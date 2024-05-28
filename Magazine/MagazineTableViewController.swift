@@ -10,7 +10,7 @@ import Kingfisher
 
 class MagazineTableViewController: UITableViewController {
 
-    var list = MagazineInfo().magazine
+    var list = MagazineInfo.magazine
     
     override func viewDidLoad() {
         super.viewDidLoad()
