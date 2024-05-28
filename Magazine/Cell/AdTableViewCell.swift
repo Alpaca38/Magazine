@@ -42,6 +42,8 @@ class AdTableViewCell: UITableViewCell {
         adButton.tintColor = .black
         adButton.layer.cornerRadius = 8
         adButton.backgroundColor = .white
+        
+        separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: self.frame.width)
     }
     
     func configure(data: Travel) {

@@ -33,6 +33,8 @@ class TouristSpotTableViewCell: UITableViewCell {
         mainImageView.contentMode = .scaleAspectFill
         ratingView.settings.fillMode = .precise
         ratingView.settings.starSize = 15
+        
+        separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     func configure(data: Travel) {

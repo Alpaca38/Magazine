@@ -16,13 +16,18 @@ class DetailCityInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
+        
+    }
+    
+    func configureTableView() {
         let nib = UINib(nibName: TouristSpotTableViewCell.identifier, bundle: nil)
         detailTableView.register(nib, forCellReuseIdentifier: TouristSpotTableViewCell.identifier)
         let nib2 = UINib(nibName: AdTableViewCell.identifier, bundle: nil)
         detailTableView.register(nib2, forCellReuseIdentifier: AdTableViewCell.identifier)
+        
         detailTableView.delegate = self
         detailTableView.dataSource = self
-        
     }
     
     @objc func likeButtonTapped(sender: UIButton) {
@@ -49,7 +54,7 @@ extension DetailCityInfoViewController: UITableViewDataSource {
         
         if data.ad {
             adCell.configure(data: data)
-            adCell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: adCell.bounds.size.width)
+//            adCell.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: adCell.frame.width)
             
             return adCell
         } else {
@@ -57,8 +62,7 @@ extension DetailCityInfoViewController: UITableViewDataSource {
             touristSpotCell.likeButton.tag = indexPath.row
             touristSpotCell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
             
-            touristSpotCell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
-            detailTableView.separatorInsetReference = .fromAutomaticInsets
+//            touristSpotCell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
             
             return touristSpotCell
         }
