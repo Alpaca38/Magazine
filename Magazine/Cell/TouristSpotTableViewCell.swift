@@ -10,6 +10,8 @@ import Kingfisher
 import Cosmos
 
 class TouristSpotTableViewCell: UITableViewCell {
+    
+    static let identifier = "TouristSpotTableViewCell"
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

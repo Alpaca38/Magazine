@@ -16,10 +16,10 @@ class DetailCityInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "TouristSpotTableViewCell", bundle: nil)
-        detailTableView.register(nib, forCellReuseIdentifier: "TouristSpotTableViewCell")
-        let nib2 = UINib(nibName: "AdTableViewCell", bundle: nil)
-        detailTableView.register(nib2, forCellReuseIdentifier: "AdTableViewCell")
+        let nib = UINib(nibName: TouristSpotTableViewCell.identifier, bundle: nil)
+        detailTableView.register(nib, forCellReuseIdentifier: TouristSpotTableViewCell.identifier)
+        let nib2 = UINib(nibName: AdTableViewCell.identifier, bundle: nil)
+        detailTableView.register(nib2, forCellReuseIdentifier: AdTableViewCell.identifier)
         detailTableView.delegate = self
         detailTableView.dataSource = self
         
@@ -42,8 +42,8 @@ extension DetailCityInfoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let touristSpotCell = tableView.dequeueReusableCell(withIdentifier: "TouristSpotTableViewCell", for: indexPath) as! TouristSpotTableViewCell
-        let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+        let touristSpotCell = tableView.dequeueReusableCell(withIdentifier: TouristSpotTableViewCell.identifier, for: indexPath) as! TouristSpotTableViewCell
+        let adCell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as! AdTableViewCell
         
         let data = list[indexPath.row]
         
