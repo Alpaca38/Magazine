@@ -29,6 +29,8 @@ class TouristSpotTableViewCell: UITableViewCell {
         descriptionLabel.numberOfLines = 0
         mainImageView.layer.cornerRadius = 5
         mainImageView.contentMode = .scaleAspectFill
+        ratingView.settings.fillMode = .precise
+        ratingView.settings.starSize = 15
     }
     
     func configure(data: Travel) {
