@@ -42,8 +42,8 @@ extension DetailCityInfoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let touristSpotCell = tableView.dequeueReusableCell(withIdentifier: "TouristSpotTableViewCell", for: IndexPath(row: indexPath.row, section: 0)) as! TouristSpotTableViewCell
-        let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: IndexPath(row: indexPath.row, section: 0)) as! AdTableViewCell
+        let touristSpotCell = tableView.dequeueReusableCell(withIdentifier: "TouristSpotTableViewCell", for: indexPath) as! TouristSpotTableViewCell
+        let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
         
         let data = list[indexPath.row]
         
