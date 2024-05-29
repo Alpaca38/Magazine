@@ -11,7 +11,7 @@ class CityInfoViewController: UIViewController {
     
     var list = CityInfo.city
     var filteredList: [City] = []
-
+    
     @IBOutlet var searchCityBar: UISearchBar!
     @IBOutlet var categorySegControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
@@ -22,10 +22,13 @@ class CityInfoViewController: UIViewController {
         filteredList = list
         
         configureNavi(title: "인기 도시")
-
         configureTableView()
-        
         configureSegment()
+        configureSearchBar()
+    }
+    
+    func configureSearchBar() {
+        searchCityBar.delegate = self
     }
     
     func configureSegment() {
@@ -64,6 +67,35 @@ class CityInfoViewController: UIViewController {
         
         tableView.rowHeight = view.frame.height / 6
         
+    }
+    
+}
+
+extension CityInfoViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let text = searchCityBar.text?.trimmingCharacters(in: .whitespaces) else {
+            return
+        }
+        
+        if text == "" {
+            filteredList = list
+            tableView.reloadData()
+        } else {
+            switch categorySegControl.selectedSegmentIndex {
+            case 0:
+                filteredList = list.filter({ $0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)})
+                tableView.reloadData()
+            case 1:
+                filteredList = list.filter({ ($0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)) && $0.domestic_travel == true})
+                tableView.reloadData()
+            case 2:
+                filteredList = list.filter({ ($0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)) && $0.domestic_travel == false})
+                tableView.reloadData()
+            default:
+                return
+            }
+        }
     }
     
 }
