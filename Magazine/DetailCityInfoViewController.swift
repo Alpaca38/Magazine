@@ -38,7 +38,19 @@ class DetailCityInfoViewController: UIViewController {
 }
 
 extension DetailCityInfoViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = list[indexPath.row]
+        if data.ad {
+            let vc = storyboard?.instantiateViewController(identifier: "AdViewController") as! AdViewController
+            let navi = UINavigationController(rootViewController: vc)
+            navi.modalPresentationStyle = .fullScreen
+            present(navi, animated: true)
+        } else {
+            let vc = storyboard?.instantiateViewController(identifier: "SpotViewController") as! SpotViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        tableView.reloadRows(at: [indexPath], with: .none)
+    }
 }
 
 extension DetailCityInfoViewController: UITableViewDataSource {
@@ -54,15 +66,12 @@ extension DetailCityInfoViewController: UITableViewDataSource {
         
         if data.ad {
             adCell.configure(data: data)
-//            adCell.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: adCell.frame.width)
             
             return adCell
         } else {
             touristSpotCell.configure(data: data)
             touristSpotCell.likeButton.tag = indexPath.row
             touristSpotCell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
-            
-//            touristSpotCell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
             
             return touristSpotCell
         }

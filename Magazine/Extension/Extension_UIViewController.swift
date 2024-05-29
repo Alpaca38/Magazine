@@ -17,4 +17,9 @@ extension UIViewController {
         
         present(alert, animated: true)
     }
+    
+    func configureNavi(title: String) {
+        navigationItem.title = title
+        navigationController?.navigationBar.tintColor = .black
+    }
 }
