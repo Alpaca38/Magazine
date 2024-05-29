@@ -18,4 +18,9 @@ extension String {
             return nil
         }
     }
+    
+    func compare(_ compare: String) -> Bool {
+        
+        return self.range(of: compare, options: .caseInsensitive) != nil
+    }
 }

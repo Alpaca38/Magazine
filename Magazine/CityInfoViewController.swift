@@ -84,13 +84,13 @@ extension CityInfoViewController: UISearchBarDelegate {
         } else {
             switch categorySegControl.selectedSegmentIndex {
             case 0:
-                filteredList = list.filter({ $0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)})
+                filteredList = list.filter({ $0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)})
                 tableView.reloadData()
             case 1:
-                filteredList = list.filter({ ($0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)) && $0.domestic_travel == true})
+                filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == true})
                 tableView.reloadData()
             case 2:
-                filteredList = list.filter({ ($0.city_name.contains(text) || $0.city_english_name.contains(text) || $0.city_explain.contains(text)) && $0.domestic_travel == false})
+                filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == false})
                 tableView.reloadData()
             default:
                 return
