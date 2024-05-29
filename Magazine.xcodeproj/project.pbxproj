@@ -37,6 +37,7 @@
 		D1957E9B2C070CDA0080E2FF /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957E9A2C070CDA0080E2FF /* CityInfo.swift */; };
 		D1957E9E2C070F7C0080E2FF /* CityInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957E9C2C070F7C0080E2FF /* CityInfoTableViewCell.swift */; };
 		D1957E9F2C070F7C0080E2FF /* CityInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1957E9D2C070F7C0080E2FF /* CityInfoTableViewCell.xib */; };
+		D1957EA12C078C130080E2FF /* Extension_UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957EA02C078C130080E2FF /* Extension_UILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		D1957E9A2C070CDA0080E2FF /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		D1957E9C2C070F7C0080E2FF /* CityInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D1957E9D2C070F7C0080E2FF /* CityInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInfoTableViewCell.xib; sourceTree = "<group>"; };
+		D1957EA02C078C130080E2FF /* Extension_UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				D12E3C422C0087C5002B7634 /* Extension_Date.swift */,
 				D12E3C622C046E39002B7634 /* Extension_UIViewController.swift */,
 				D12E3C482C00946C002B7634 /* Extension_String.swift */,
+				D1957EA02C078C130080E2FF /* Extension_UILabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				D12E3C632C046E39002B7634 /* Extension_UIViewController.swift in Sources */,
 				D12E3C4D2C009A61002B7634 /* Restaurant.swift in Sources */,
 				D1957E9B2C070CDA0080E2FF /* CityInfo.swift in Sources */,
+				D1957EA12C078C130080E2FF /* Extension_UILabel.swift in Sources */,
 				D12E3C432C0087C5002B7634 /* Extension_Date.swift in Sources */,
 				D12E3C2D2C008422002B7634 /* ViewController.swift in Sources */,
 				D12E3C4F2C009C1A002B7634 /* RestaurantTableViewCell.swift in Sources */,

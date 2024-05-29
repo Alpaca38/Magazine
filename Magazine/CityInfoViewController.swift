@@ -46,16 +46,14 @@ class CityInfoViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             filteredList = list
-            tableView.reloadData()
         case 1:
             filteredList = list.filter({ $0.domestic_travel == true })
-            tableView.reloadData()
         case 2:
             filteredList = list.filter({ $0.domestic_travel == false })
-            tableView.reloadData()
         default:
             return
         }
+        tableView.reloadData()
     }
     
     func configureTableView() {
@@ -80,22 +78,19 @@ extension CityInfoViewController: UISearchBarDelegate {
         
         if text == "" {
             filteredList = list
-            tableView.reloadData()
         } else {
             switch categorySegControl.selectedSegmentIndex {
             case 0:
                 filteredList = list.filter({ $0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)})
-                tableView.reloadData()
             case 1:
                 filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == true})
-                tableView.reloadData()
             case 2:
                 filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == false})
-                tableView.reloadData()
             default:
                 return
             }
         }
+        tableView.reloadData()
     }
     
 }
@@ -107,7 +102,11 @@ extension CityInfoViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityInfoTableViewCell", for: indexPath) as! CityInfoTableViewCell
-        cell.configure(data: filteredList[indexPath.row])
+        let data = filteredList[indexPath.row]
+        cell.configure(data: data)
+        
+        cell.cityTitleLabel.asColor(targetString: searchCityBar.text!, color: .yellow)
+        cell.cityExplainLabel.asColor(targetString: searchCityBar.text!, color: .red)
         
         return cell
     }
