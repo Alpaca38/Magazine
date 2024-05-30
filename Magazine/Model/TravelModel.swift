@@ -14,6 +14,10 @@ struct Travel {
     var save: Int?
     var like: Bool?
     var ad: Bool
+    
+    var saveText: String {
+        return "저장 \(save!)"
+    }
 }
 
 struct TravelInfo {

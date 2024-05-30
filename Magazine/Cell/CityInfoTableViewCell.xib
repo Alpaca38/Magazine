@@ -35,13 +35,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="7xf-cv-GEU" secondAttribute="trailing" constant="16" id="3i4-Cu-HHq"/>
-                    <constraint firstAttribute="bottom" secondItem="GYs-Dz-gfw" secondAttribute="bottom" id="8Qq-0y-dTP"/>
-                    <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DyZ-wZ-6qp"/>
+                    <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="IYK-ZK-GWl" secondAttribute="leading" id="HWT-7d-2f8"/>
                     <constraint firstAttribute="trailing" secondItem="IYK-ZK-GWl" secondAttribute="trailing" id="ML2-mU-sfW"/>
                     <constraint firstAttribute="bottom" secondItem="IYK-ZK-GWl" secondAttribute="bottom" id="Qsl-py-MSt"/>
                     <constraint firstItem="IYK-ZK-GWl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YjX-Bx-hpA"/>
+                    <constraint firstAttribute="bottom" secondItem="GYs-Dz-gfw" secondAttribute="bottom" id="ZES-XE-H8X"/>
                     <constraint firstItem="IYK-ZK-GWl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aZr-e8-nSf"/>
-                    <constraint firstAttribute="trailing" secondItem="GYs-Dz-gfw" secondAttribute="trailing" id="cgy-G4-u0W"/>
+                    <constraint firstItem="IYK-ZK-GWl" firstAttribute="trailing" secondItem="GYs-Dz-gfw" secondAttribute="trailing" id="aw6-rT-lDG"/>
                     <constraint firstItem="7xf-cv-GEU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="j9h-uw-vIn"/>
                 </constraints>
             </tableViewCellContentView>

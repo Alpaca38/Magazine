@@ -42,11 +42,13 @@ extension DetailCityInfoViewController: UITableViewDelegate {
         let data = list[indexPath.row]
         if data.ad {
             let vc = storyboard?.instantiateViewController(identifier: "AdViewController") as! AdViewController
+            vc.info = data.title
             let navi = UINavigationController(rootViewController: vc)
             navi.modalPresentationStyle = .fullScreen
             present(navi, animated: true)
         } else {
             let vc = storyboard?.instantiateViewController(identifier: "SpotViewController") as! SpotViewController
+            vc.data = data
             navigationController?.pushViewController(vc, animated: true)
         }
         tableView.reloadRows(at: [indexPath], with: .none)

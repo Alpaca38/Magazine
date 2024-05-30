@@ -9,6 +9,10 @@ import UIKit
 
 class AdViewController: UIViewController {
 
+    @IBOutlet var infoLabel: UILabel!
+    
+    var info: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +20,12 @@ class AdViewController: UIViewController {
         
         let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(leftBarButtonTapped))
         navigationItem.leftBarButtonItem = leftBarButton
+        
+        infoLabel.text = info
+        infoLabel.numberOfLines = 0
+        infoLabel.textAlignment = .center
+        infoLabel.font = .boldSystemFont(ofSize: 24)
+        
     }
     
     @objc func leftBarButtonTapped() {
