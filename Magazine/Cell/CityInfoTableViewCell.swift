@@ -35,10 +35,14 @@ class CityInfoTableViewCell: UITableViewCell {
         
         cityExplainLabel.font = .systemFont(ofSize: 16)
         cityExplainLabel.textColor = .white
+        cityExplainLabel.clipsToBounds = true
+        cityExplainLabel.layer.cornerRadius = 20
+        cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        cityExplainLabel.backgroundColor = .black.withAlphaComponent(0.5)
         
-        explainBackgroundView.layer.cornerRadius = 20
-        explainBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        explainBackgroundView.backgroundColor = .black.withAlphaComponent(0.5)
+//        explainBackgroundView.layer.cornerRadius = 20
+//        explainBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+//        explainBackgroundView.backgroundColor = .black.withAlphaComponent(0.5)
         
     }
     

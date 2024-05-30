@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,29 +27,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ldsjf;ldsjal;fjldsafjlsdflasjf;l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-Dz-gfw">
-                        <rect key="frame" x="8" y="103" width="198" height="21"/>
+                        <rect key="frame" x="0.0" y="103" width="320" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6j-OP-g92">
-                        <rect key="frame" x="0.0" y="103" width="320" height="21"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="7xf-cv-GEU" secondAttribute="trailing" constant="16" id="3i4-Cu-HHq"/>
                     <constraint firstAttribute="bottom" secondItem="GYs-Dz-gfw" secondAttribute="bottom" id="8Qq-0y-dTP"/>
-                    <constraint firstAttribute="trailing" secondItem="G6j-OP-g92" secondAttribute="trailing" id="9F4-iG-Ec3"/>
-                    <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="DyZ-wZ-6qp"/>
+                    <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DyZ-wZ-6qp"/>
                     <constraint firstAttribute="trailing" secondItem="IYK-ZK-GWl" secondAttribute="trailing" id="ML2-mU-sfW"/>
                     <constraint firstAttribute="bottom" secondItem="IYK-ZK-GWl" secondAttribute="bottom" id="Qsl-py-MSt"/>
-                    <constraint firstItem="G6j-OP-g92" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="R4Y-C8-Brr"/>
                     <constraint firstItem="IYK-ZK-GWl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YjX-Bx-hpA"/>
                     <constraint firstItem="IYK-ZK-GWl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aZr-e8-nSf"/>
+                    <constraint firstAttribute="trailing" secondItem="GYs-Dz-gfw" secondAttribute="trailing" id="cgy-G4-u0W"/>
                     <constraint firstItem="7xf-cv-GEU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="j9h-uw-vIn"/>
-                    <constraint firstItem="G6j-OP-g92" firstAttribute="height" secondItem="GYs-Dz-gfw" secondAttribute="height" id="nGT-Zj-uAk"/>
-                    <constraint firstAttribute="bottom" secondItem="G6j-OP-g92" secondAttribute="bottom" id="sXg-hQ-aZY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -58,14 +50,8 @@
                 <outlet property="cityExplainLabel" destination="GYs-Dz-gfw" id="NYQ-E2-NuV"/>
                 <outlet property="cityImageView" destination="IYK-ZK-GWl" id="pjU-pz-SZD"/>
                 <outlet property="cityTitleLabel" destination="7xf-cv-GEU" id="ZF8-38-2FD"/>
-                <outlet property="explainBackgroundView" destination="G6j-OP-g92" id="orc-W9-uma"/>
             </connections>
             <point key="canvasLocation" x="161.83206106870227" y="53.521126760563384"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

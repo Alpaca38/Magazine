@@ -82,6 +82,8 @@ class CityInfoViewController: UIViewController {
         
         tableView.rowHeight = view.frame.height / 6
         
+        tableView.separatorStyle = .none
+        
     }
     
 }
