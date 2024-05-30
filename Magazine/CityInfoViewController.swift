@@ -43,16 +43,33 @@ class CityInfoViewController: UIViewController {
     }
     
     @objc func segmentValueChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            filteredList = list
-        case 1:
-            filteredList = list.filter({ $0.domestic_travel == true })
-        case 2:
-            filteredList = list.filter({ $0.domestic_travel == false })
-        default:
+        guard let text = searchCityBar.text else {
             return
         }
+        if text.isEmpty {
+            switch sender.selectedSegmentIndex {
+            case 0:
+                filteredList = list
+            case 1:
+                filteredList = list.filter({$0.domestic_travel == true})
+            case 2:
+                filteredList = list.filter({$0.domestic_travel == false})
+            default:
+                return
+            }
+        } else {
+            switch sender.selectedSegmentIndex {
+            case 0:
+                filteredList = list.filter({ $0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)})
+            case 1:
+                filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == true})
+            case 2:
+                filteredList = list.filter({ ($0.city_name.compare(text) || $0.city_english_name.compare(text) || $0.city_explain.compare(text)) && $0.domestic_travel == false})
+            default:
+                return
+            }
+        }
+        
         tableView.reloadData()
     }
     
