@@ -36,6 +36,8 @@ class CityInfoTableViewCell: UITableViewCell {
         cityExplainLabel.font = .systemFont(ofSize: 16)
         cityExplainLabel.textColor = .white
         
+        explainBackgroundView.layer.cornerRadius = 20
+        explainBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner]
         explainBackgroundView.backgroundColor = .black.withAlphaComponent(0.5)
         
     }
