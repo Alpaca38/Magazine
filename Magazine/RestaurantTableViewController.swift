@@ -19,6 +19,9 @@ class RestaurantTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 146
         
+        let map = UIBarButtonItem(image: UIImage(systemName: "map"), style: .plain, target: self, action: #selector(mapButtonTapped))
+        navigationItem.rightBarButtonItem = map
+        
         searchTextField.placeholder = "검색어를 입력해주세요. (ex. 한식, 분식, 만원 이하)"
         searchTextField.addTarget(self, action: #selector(searchButtonTapped), for: .editingDidEndOnExit)
         
@@ -29,12 +32,17 @@ class RestaurantTableViewController: UITableViewController {
 
     }
     
+    @objc func mapButtonTapped() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc func searchButtonTapped() {
         if searchTextField.text == "만원 이하" {
             filteredList = list.filter({ $0.price <= 10000 })
         } else if searchTextField.text == "" {
             filteredList = list
-            showAlert(title: "검색어를 입력하지 않았습니다.", message: "검색어를 입력해주세요.")
+            showAlert(title: "검색어를 입력하지 않았습니다.", message: "검색어를 입력해주세요.", style: .alert)
         } else {
             filteredList = list.filter({ $0.name.contains(searchTextField.text!) || $0.category.contains(searchTextField.text!) })
         }
