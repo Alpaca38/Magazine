@@ -38,6 +38,7 @@
 		D1957E9E2C070F7C0080E2FF /* CityInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957E9C2C070F7C0080E2FF /* CityInfoTableViewCell.swift */; };
 		D1957E9F2C070F7C0080E2FF /* CityInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1957E9D2C070F7C0080E2FF /* CityInfoTableViewCell.xib */; };
 		D1957EA12C078C130080E2FF /* Extension_UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957EA02C078C130080E2FF /* Extension_UILabel.swift */; };
+		D1957EAC2C08612E0080E2FF /* BasePaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957EAB2C08612E0080E2FF /* BasePaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D1957E9C2C070F7C0080E2FF /* CityInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D1957E9D2C070F7C0080E2FF /* CityInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D1957EA02C078C130080E2FF /* Extension_UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UILabel.swift; sourceTree = "<group>"; };
+		D1957EAB2C08612E0080E2FF /* BasePaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				D12E3C312C008423002B7634 /* Assets.xcassets */,
 				D12E3C332C008423002B7634 /* LaunchScreen.storyboard */,
 				D12E3C362C008423002B7634 /* Info.plist */,
+				D1957EAB2C08612E0080E2FF /* BasePaddingLabel.swift */,
 			);
 			path = Magazine;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				D12E3C4F2C009C1A002B7634 /* RestaurantTableViewCell.swift in Sources */,
 				D12E3C4B2C0099E8002B7634 /* RestaurantTableViewController.swift in Sources */,
 				D12E3C472C0089B1002B7634 /* MagazineTableViewCell.swift in Sources */,
+				D1957EAC2C08612E0080E2FF /* BasePaddingLabel.swift in Sources */,
 				D12E3C6E2C04739D002B7634 /* AdTableViewCell.swift in Sources */,
 				D1957E922C07041E0080E2FF /* SpotViewController.swift in Sources */,
 				D1957E992C070C680080E2FF /* CityInfoViewController.swift in Sources */,

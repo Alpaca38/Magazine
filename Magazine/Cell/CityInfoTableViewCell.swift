@@ -12,8 +12,7 @@ class CityInfoTableViewCell: UITableViewCell {
 
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityTitleLabel: UILabel!
-    @IBOutlet var cityExplainLabel: UILabel!
-    @IBOutlet var explainBackgroundView: UIView!
+    @IBOutlet var cityExplainLabel: BasePaddingLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,10 +38,7 @@ class CityInfoTableViewCell: UITableViewCell {
         cityExplainLabel.layer.cornerRadius = 20
         cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
         cityExplainLabel.backgroundColor = .black.withAlphaComponent(0.5)
-        
-//        explainBackgroundView.layer.cornerRadius = 20
-//        explainBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-//        explainBackgroundView.backgroundColor = .black.withAlphaComponent(0.5)
+        cityExplainLabel.drawText(in: CGRect())
         
     }
     
