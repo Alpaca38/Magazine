@@ -8,16 +8,21 @@
 import UIKit
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet var tableView: UITableView!
     
     var data: ChatRoom?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureNavi(title: data!.chatroomName)
         configureTableView()
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            tableView.scrollToRow(at: IndexPath(row: data!.chatList.count - 1, section: 0), at: .bottom, animated: false)
+        }
     }
     
     func configureTableView() {
@@ -32,7 +37,7 @@ class ChatViewController: UIViewController {
         
         tableView.separatorStyle = .none
     }
-
+    
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
