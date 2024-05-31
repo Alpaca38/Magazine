@@ -26,7 +26,7 @@ class CityInfoTableViewCell: UITableViewCell {
     }
     
     func configureLayout() {
-        cityImageView.layer.cornerRadius = 20
+        cityImageView.layer.cornerRadius = 10
         cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
         cityImageView.contentMode = .scaleAspectFill
         
