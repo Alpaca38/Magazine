@@ -21,6 +21,8 @@
                         <rect key="frame" x="16" y="8" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="jaT-kp-Jky" secondAttribute="height" multiplier="1:1" id="JWL-SZ-6B6"/>
+                            <constraint firstAttribute="height" constant="60" id="dOD-mk-DGM"/>
+                            <constraint firstAttribute="width" constant="60" id="gbE-0S-QU7"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5O-hO-wZD">
@@ -47,11 +49,10 @@
                     <constraint firstItem="LqM-1i-Ef7" firstAttribute="top" secondItem="q5O-hO-wZD" secondAttribute="top" id="Cfq-ZC-Tn5"/>
                     <constraint firstItem="q5O-hO-wZD" firstAttribute="leading" secondItem="jaT-kp-Jky" secondAttribute="trailing" constant="8" id="KbJ-II-yc8"/>
                     <constraint firstItem="NqJ-5d-7aT" firstAttribute="leading" secondItem="jaT-kp-Jky" secondAttribute="trailing" constant="8" symbolic="YES" id="Yhg-fR-K2A"/>
-                    <constraint firstItem="jaT-kp-Jky" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="a7X-KS-U3a"/>
-                    <constraint firstAttribute="bottom" secondItem="jaT-kp-Jky" secondAttribute="bottom" constant="8" id="hPK-dt-RPe"/>
                     <constraint firstItem="jaT-kp-Jky" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jwh-dB-8Ab"/>
                     <constraint firstItem="q5O-hO-wZD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="n9g-p7-fzF"/>
                     <constraint firstAttribute="trailing" secondItem="LqM-1i-Ef7" secondAttribute="trailing" constant="16" id="rLS-3G-CzH"/>
+                    <constraint firstItem="jaT-kp-Jky" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="swD-Fx-tnG"/>
                     <constraint firstAttribute="bottom" secondItem="NqJ-5d-7aT" secondAttribute="bottom" constant="14" id="ymt-aV-mrM"/>
                 </constraints>
             </tableViewCellContentView>

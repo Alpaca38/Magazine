@@ -33,9 +33,9 @@ class TravelGroupTalkTableViewCell: UITableViewCell {
             $0?.backgroundColor = .darkGray
         }
         
-        chatRoomNameLabel.font = UILabel.titleFont
+        chatRoomNameLabel.font = UILabel.boldFont
         
-        chatLabel.font = UILabel.descriptionFont
+        chatLabel.font = UILabel.contentsFont
         chatLabel.textColor = .lightGray
         
         dateLabel.font = .systemFont(ofSize: 12)

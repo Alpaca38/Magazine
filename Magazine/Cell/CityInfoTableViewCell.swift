@@ -13,7 +13,7 @@ class CityInfoTableViewCell: UITableViewCell {
     @IBOutlet var customView: UIView!
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityTitleLabel: UILabel!
-    @IBOutlet var cityExplainLabel: BasePaddingLabel!
+    @IBOutlet var cityExplainLabel: PaddingLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

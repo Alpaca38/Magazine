@@ -20,7 +20,11 @@ extension UILabel {
         return UIFont.boldSystemFont(ofSize: 17)
     }
     
-    static var descriptionFont: UIFont {
+    static var boldFont: UIFont {
+        return UIFont.boldSystemFont(ofSize: 14)
+    }
+    
+    static var contentsFont: UIFont {
         return UIFont.systemFont(ofSize: 14)
     }
 }

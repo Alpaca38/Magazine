@@ -402,6 +402,36 @@
             </objects>
             <point key="canvasLocation" x="1172" y="2120"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="LZ9-mE-dQL">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="Pfm-MO-BYa" customClass="ChatViewController" customModule="Magazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ix-07-U5L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GiA-Sa-2Ia">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nq3-qJ-vga"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nq3-qJ-vga" firstAttribute="trailing" secondItem="GiA-Sa-2Ia" secondAttribute="trailing" id="65k-34-9up"/>
+                            <constraint firstItem="nq3-qJ-vga" firstAttribute="bottom" secondItem="GiA-Sa-2Ia" secondAttribute="bottom" id="8uE-Oc-Lv2"/>
+                            <constraint firstItem="GiA-Sa-2Ia" firstAttribute="top" secondItem="nq3-qJ-vga" secondAttribute="top" id="Z2X-r4-s3M"/>
+                            <constraint firstItem="GiA-Sa-2Ia" firstAttribute="leading" secondItem="nq3-qJ-vga" secondAttribute="leading" id="bjA-Fa-vkw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="GiA-Sa-2Ia" id="bH4-pX-dFh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbl-iB-xL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="2120"/>
+        </scene>
         <!--Spot View Controller-->
         <scene sceneID="ZbV-33-8X3">
             <objects>

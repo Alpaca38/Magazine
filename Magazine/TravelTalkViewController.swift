@@ -8,7 +8,7 @@
 import UIKit
 
 class TravelTalkViewController: UIViewController {
-
+    
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
@@ -23,7 +23,7 @@ class TravelTalkViewController: UIViewController {
         super.viewDidLoad()
         
         filteredList = list
-
+        
         configureNavi(title: "Travel Talk")
         configureTableView()
         configureSearchBar()
@@ -42,12 +42,19 @@ class TravelTalkViewController: UIViewController {
         
         let nib2 = UINib(nibName: TravelGroupTalkTableViewCell.identifier, bundle: nil)
         tableView.register(nib2, forCellReuseIdentifier: TravelGroupTalkTableViewCell.identifier)
+        
+        tableView.separatorStyle = .none
     }
     
 }
 
 extension TravelTalkViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = filteredList[indexPath.row]
+        let vc = storyboard?.instantiateViewController(identifier: ChatViewController.identifier) as! ChatViewController
+        vc.data = data
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension TravelTalkViewController: UITableViewDataSource {

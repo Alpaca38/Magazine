@@ -24,9 +24,9 @@ class TravelTalkTableViewCell: UITableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         profileImageView.backgroundColor = .darkGray
         
-        chatRoomNameLabel.font = UILabel.titleFont
+        chatRoomNameLabel.font = UILabel.boldFont
         
-        chatLabel.font = UILabel.descriptionFont
+        chatLabel.font = UILabel.contentsFont
         chatLabel.textColor = .lightGray
         
         dateLabel.font = .systemFont(ofSize: 12)
