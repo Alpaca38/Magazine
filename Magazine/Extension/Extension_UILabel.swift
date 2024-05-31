@@ -15,4 +15,12 @@ extension UILabel {
         attributedString.addAttribute(.foregroundColor, value: color, range: range)
         attributedText = attributedString
     }
+    
+    static var titleFont: UIFont {
+        return UIFont.boldSystemFont(ofSize: 17)
+    }
+    
+    static var descriptionFont: UIFont {
+        return UIFont.systemFont(ofSize: 14)
+    }
 }

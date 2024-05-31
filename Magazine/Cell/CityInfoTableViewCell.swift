@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-import SwiftUI
 
 class CityInfoTableViewCell: UITableViewCell {
 
