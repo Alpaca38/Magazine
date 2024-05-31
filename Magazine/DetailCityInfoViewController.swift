@@ -41,13 +41,13 @@ extension DetailCityInfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = list[indexPath.row]
         if data.ad {
-            let vc = storyboard?.instantiateViewController(identifier: "AdViewController") as! AdViewController
+            let vc = storyboard?.instantiateViewController(identifier: AdViewController.identifier) as! AdViewController
             vc.info = data.title
             let navi = UINavigationController(rootViewController: vc)
             navi.modalPresentationStyle = .fullScreen
             present(navi, animated: true)
         } else {
-            let vc = storyboard?.instantiateViewController(identifier: "SpotViewController") as! SpotViewController
+            let vc = storyboard?.instantiateViewController(identifier: SpotViewController.identifier) as! SpotViewController
             vc.data = data
             navigationController?.pushViewController(vc, animated: true)
         }

@@ -74,8 +74,8 @@ class CityInfoViewController: UIViewController {
     }
     
     func configureTableView() {
-        let nib = UINib(nibName: "CityInfoTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CityInfoTableViewCell")
+        let nib = UINib(nibName: CityInfoTableViewCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CityInfoTableViewCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -120,7 +120,7 @@ extension CityInfoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityInfoTableViewCell", for: indexPath) as! CityInfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityInfoTableViewCell.identifier, for: indexPath) as! CityInfoTableViewCell
         let data = filteredList[indexPath.row]
         cell.configure(data: data)
         

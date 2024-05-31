@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftUI
 
 class CityInfoTableViewCell: UITableViewCell {
 
@@ -22,6 +23,9 @@ class CityInfoTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 8, right: 16))
+        cityExplainLabel.roundCorners(corners: [.bottomRight], radius: 20000)
+//        cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
+//        cityExplainLabel.layer.cornerRadius = 20
     }
     
     func configureLayout() {
