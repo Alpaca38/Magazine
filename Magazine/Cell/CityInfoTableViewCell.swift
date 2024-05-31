@@ -23,9 +23,6 @@ class CityInfoTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 8, right: 16))
-        cityExplainLabel.roundCorners(corners: [.bottomRight], radius: 20000)
-//        cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
-//        cityExplainLabel.layer.cornerRadius = 20
     }
     
     func configureLayout() {
@@ -40,7 +37,8 @@ class CityInfoTableViewCell: UITableViewCell {
         cityExplainLabel.textColor = .white
         cityExplainLabel.clipsToBounds = true
         cityExplainLabel.backgroundColor = .black.withAlphaComponent(0.5)
-        cityExplainLabel.drawText(in: CGRect())
+        cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        cityExplainLabel.layer.cornerRadius = 10
         
     }
     
