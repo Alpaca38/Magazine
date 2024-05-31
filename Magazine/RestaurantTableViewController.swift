@@ -13,7 +13,11 @@ class RestaurantTableViewController: UITableViewController {
     @IBOutlet var searchButton: UIButton!
     
     var list = RestaurantList.restaurantArray
-    var filteredList: [Restaurant] = []
+    var filteredList: [Restaurant] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +50,6 @@ class RestaurantTableViewController: UITableViewController {
         } else {
             filteredList = list.filter({ $0.name.contains(searchTextField.text!) || $0.category.contains(searchTextField.text!) })
         }
-        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

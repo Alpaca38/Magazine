@@ -10,7 +10,11 @@ import UIKit
 class CityInfoViewController: UIViewController {
     
     var list = CityInfo.city
-    var filteredList: [City] = []
+    var filteredList: [City] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet var searchCityBar: UISearchBar!
     @IBOutlet var categorySegControl: UISegmentedControl!
@@ -69,8 +73,6 @@ class CityInfoViewController: UIViewController {
                 return
             }
         }
-        
-        tableView.reloadData()
     }
     
     func configureTableView() {
@@ -109,7 +111,6 @@ extension CityInfoViewController: UISearchBarDelegate {
                 return
             }
         }
-        tableView.reloadData()
     }
     
 }
