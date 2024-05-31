@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,32 +18,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYK-ZK-GWl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방콕 | BangKok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-cv-GEU">
-                        <rect key="frame" x="194" y="16" width="110" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ldsjf;ldsjal;fjldsafjlsdflasjf;l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-Dz-gfw" customClass="BasePaddingLabel" customModule="Magazine" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="103" width="320" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1y-xS-SYc">
+                        <rect key="frame" x="16" y="8" width="288" height="108"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYK-ZK-GWl">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="108"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방콕 | BangKok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xf-cv-GEU">
+                                <rect key="frame" x="162" y="16" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ldsjf;ldsjal;fjldsafjlsdflasjf;l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-Dz-gfw" customClass="BasePaddingLabel" customModule="Magazine" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="87" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IYK-ZK-GWl" secondAttribute="trailing" id="8Z2-TE-4dh"/>
+                            <constraint firstItem="IYK-ZK-GWl" firstAttribute="leading" secondItem="F1y-xS-SYc" secondAttribute="leading" id="IeT-0m-GDi"/>
+                            <constraint firstAttribute="bottom" secondItem="GYs-Dz-gfw" secondAttribute="bottom" id="KDj-zp-aiM"/>
+                            <constraint firstAttribute="bottom" secondItem="IYK-ZK-GWl" secondAttribute="bottom" id="LyK-vJ-RF8"/>
+                            <constraint firstAttribute="trailing" secondItem="7xf-cv-GEU" secondAttribute="trailing" constant="16" id="OIe-Mk-kgp"/>
+                            <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="F1y-xS-SYc" secondAttribute="leading" id="VHb-Pl-miQ"/>
+                            <constraint firstItem="IYK-ZK-GWl" firstAttribute="top" secondItem="F1y-xS-SYc" secondAttribute="top" id="gb1-iW-n7A"/>
+                            <constraint firstAttribute="trailing" secondItem="GYs-Dz-gfw" secondAttribute="trailing" id="qLz-oX-S3g"/>
+                            <constraint firstItem="7xf-cv-GEU" firstAttribute="top" secondItem="F1y-xS-SYc" secondAttribute="top" constant="16" id="rOK-dn-zmB"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="7xf-cv-GEU" secondAttribute="trailing" constant="16" id="3i4-Cu-HHq"/>
-                    <constraint firstAttribute="trailing" secondItem="IYK-ZK-GWl" secondAttribute="trailing" id="ML2-mU-sfW"/>
-                    <constraint firstAttribute="bottom" secondItem="IYK-ZK-GWl" secondAttribute="bottom" id="Qsl-py-MSt"/>
-                    <constraint firstAttribute="trailing" secondItem="GYs-Dz-gfw" secondAttribute="trailing" id="X7l-le-cQY"/>
-                    <constraint firstItem="GYs-Dz-gfw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YHa-TY-JkH"/>
-                    <constraint firstItem="IYK-ZK-GWl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YjX-Bx-hpA"/>
-                    <constraint firstAttribute="bottom" secondItem="GYs-Dz-gfw" secondAttribute="bottom" id="ZES-XE-H8X"/>
-                    <constraint firstItem="IYK-ZK-GWl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aZr-e8-nSf"/>
-                    <constraint firstItem="7xf-cv-GEU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="j9h-uw-vIn"/>
+                    <constraint firstItem="F1y-xS-SYc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Oe4-hr-YTK"/>
+                    <constraint firstAttribute="bottom" secondItem="F1y-xS-SYc" secondAttribute="bottom" constant="8" id="eGa-YZ-JBh"/>
+                    <constraint firstAttribute="trailing" secondItem="F1y-xS-SYc" secondAttribute="trailing" constant="16" id="jzt-Bh-Zg3"/>
+                    <constraint firstItem="F1y-xS-SYc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uJU-bF-9xf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -50,8 +63,14 @@
                 <outlet property="cityExplainLabel" destination="GYs-Dz-gfw" id="NYQ-E2-NuV"/>
                 <outlet property="cityImageView" destination="IYK-ZK-GWl" id="pjU-pz-SZD"/>
                 <outlet property="cityTitleLabel" destination="7xf-cv-GEU" id="ZF8-38-2FD"/>
+                <outlet property="customView" destination="F1y-xS-SYc" id="N6e-1v-GH2"/>
             </connections>
             <point key="canvasLocation" x="161.83206106870227" y="53.521126760563384"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -11,6 +11,7 @@ import SwiftUI
 
 class CityInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet var customView: UIView!
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityTitleLabel: UILabel!
     @IBOutlet var cityExplainLabel: BasePaddingLabel!
@@ -20,14 +21,11 @@ class CityInfoTableViewCell: UITableViewCell {
         configureLayout()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 8, right: 16))
-    }
-    
     func configureLayout() {
-        cityImageView.layer.cornerRadius = 10
-        cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        customView.clipsToBounds = true
+        customView.layer.cornerRadius = 20
+        customView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        
         cityImageView.contentMode = .scaleAspectFill
         
         cityTitleLabel.font = .boldSystemFont(ofSize: 21)
@@ -37,9 +35,6 @@ class CityInfoTableViewCell: UITableViewCell {
         cityExplainLabel.textColor = .white
         cityExplainLabel.clipsToBounds = true
         cityExplainLabel.backgroundColor = .black.withAlphaComponent(0.5)
-        cityExplainLabel.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        cityExplainLabel.layer.cornerRadius = 10
-        
     }
     
     func configure(data: City) {
