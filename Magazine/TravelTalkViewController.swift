@@ -13,12 +13,24 @@ class TravelTalkViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var list = ChatRoomList.mockChatList
+    var filteredList: [ChatRoom] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        filteredList = list
 
         configureNavi(title: "Travel Talk")
         configureTableView()
+        configureSearchBar()
+    }
+    
+    func configureSearchBar() {
+        searchBar.delegate = self
     }
     
     func configureTableView() {
@@ -40,11 +52,11 @@ extension TravelTalkViewController: UITableViewDelegate {
 
 extension TravelTalkViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        list.count
+        filteredList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = list[indexPath.row]
+        let data = filteredList[indexPath.row]
         
         if data.chatroomImage.count != 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: TravelGroupTalkTableViewCell.identifier, for: indexPath) as! TravelGroupTalkTableViewCell
@@ -58,6 +70,18 @@ extension TravelTalkViewController: UITableViewDataSource {
             return cell
         }
     }
-    
-    
+}
+
+extension TravelTalkViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let text = searchBar.text?.trimmingCharacters(in: .whitespaces) else {
+            return
+        }
+        
+        if text == "" {
+            filteredList = list
+        } else {
+            filteredList = list.filter({ $0.chatroomName.compare(text) })
+        }
+    }
 }
