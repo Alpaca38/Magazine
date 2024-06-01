@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 class TravelTalkTableViewCell: UITableViewCell {
 
@@ -23,6 +23,7 @@ class TravelTalkTableViewCell: UITableViewCell {
     func configureLayout() {
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         profileImageView.backgroundColor = .darkGray
+        profileImageView.contentMode = .scaleAspectFill
         
         chatRoomNameLabel.font = UILabel.boldFont
         
@@ -34,8 +35,9 @@ class TravelTalkTableViewCell: UITableViewCell {
     }
     
     func configure(data: ChatRoom) {
-        let url = URL(string: data.chatroomImage[0])
-        profileImageView.kf.setImage(with: url)
+//        let url = URL(string: data.chatroomImage[0])
+//        profileImageView.kf.setImage(with: url)
+        profileImageView.image = UIImage(named: data.chatroomImage[0])
         
         chatRoomNameLabel.text = data.chatroomName
         

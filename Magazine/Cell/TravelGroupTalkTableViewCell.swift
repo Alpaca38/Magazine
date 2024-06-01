@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 class TravelGroupTalkTableViewCell: UITableViewCell {
 
@@ -43,8 +43,11 @@ class TravelGroupTalkTableViewCell: UITableViewCell {
     }
     
     func configure(data: ChatRoom) {
+//        for (index, imageView) in imageViews.enumerated() {
+//            setImage(imageView: imageView!, url: data.chatroomImage[index])
+//        }
         for (index, imageView) in imageViews.enumerated() {
-            setImage(imageView: imageView!, url: data.chatroomImage[index])
+            imageView?.image = UIImage(named: data.chatroomImage[index])
         }
         
         chatRoomNameLabel.text = data.chatroomName
@@ -58,8 +61,8 @@ class TravelGroupTalkTableViewCell: UITableViewCell {
         dateLabel.text = date.formatted(.dateTime.year(.twoDigits).month(.twoDigits).day(.twoDigits).locale(Locale(identifier: "ko_KR")))
     }
     
-    func setImage(imageView: UIImageView, url: String) {
-        let url = URL(string: url)
-        imageView.kf.setImage(with: url)
-    }
+//    func setImage(imageView: UIImageView, url: String) {
+//        let url = URL(string: url)
+//        imageView.kf.setImage(with: url)
+//    }
 }

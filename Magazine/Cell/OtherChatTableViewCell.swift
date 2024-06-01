@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 class OtherChatTableViewCell: UITableViewCell {
 
@@ -38,8 +38,9 @@ class OtherChatTableViewCell: UITableViewCell {
     }
     
     func configure(data: Chat) {
-        let url = URL(string: data.user.profileImage)
-        profileImageView.kf.setImage(with: url)
+//        let url = URL(string: data.user.profileImage)
+//        profileImageView.kf.setImage(with: url)
+        profileImageView.image = UIImage(named: data.user.profileImage)
         
         userLabel.text = data.user.rawValue
         
