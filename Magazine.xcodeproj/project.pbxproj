@@ -53,6 +53,8 @@
 		D1957ECF2C09E04F0080E2FF /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957ECD2C09E04F0080E2FF /* MyChatTableViewCell.swift */; };
 		D1957ED02C09E04F0080E2FF /* MyChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1957ECE2C09E04F0080E2FF /* MyChatTableViewCell.xib */; };
 		D1957ED22C09EE0D0080E2FF /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957ED12C09EE0D0080E2FF /* PaddingLabel.swift */; };
+		D1957ED52C0B57E80080E2FF /* SeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1957ED32C0B57E80080E2FF /* SeparatorTableViewCell.swift */; };
+		D1957ED62C0B57E80080E2FF /* SeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1957ED42C0B57E80080E2FF /* SeparatorTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		D1957ECD2C09E04F0080E2FF /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
 		D1957ECE2C09E04F0080E2FF /* MyChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatTableViewCell.xib; sourceTree = "<group>"; };
 		D1957ED12C09EE0D0080E2FF /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		D1957ED32C0B57E80080E2FF /* SeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		D1957ED42C0B57E80080E2FF /* SeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeparatorTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 				D1957ECA2C09E0340080E2FF /* OtherChatTableViewCell.xib */,
 				D1957ECD2C09E04F0080E2FF /* MyChatTableViewCell.swift */,
 				D1957ECE2C09E04F0080E2FF /* MyChatTableViewCell.xib */,
+				D1957ED32C0B57E80080E2FF /* SeparatorTableViewCell.swift */,
+				D1957ED42C0B57E80080E2FF /* SeparatorTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				D12E3C6B2C04738F002B7634 /* TouristSpotTableViewCell.xib in Resources */,
 				D12E3C322C008423002B7634 /* Assets.xcassets in Resources */,
 				D1957ECC2C09E0340080E2FF /* OtherChatTableViewCell.xib in Resources */,
+				D1957ED62C0B57E80080E2FF /* SeparatorTableViewCell.xib in Resources */,
 				D1957ED02C09E04F0080E2FF /* MyChatTableViewCell.xib in Resources */,
 				D12E3C352C008423002B7634 /* Base in Resources */,
 				D1957EC62C09B2140080E2FF /* TravelGroupTalkTableViewCell.xib in Resources */,
@@ -306,6 +313,7 @@
 				D12E3C432C0087C5002B7634 /* Extension_Date.swift in Sources */,
 				D12E3C2D2C008422002B7634 /* ViewController.swift in Sources */,
 				D1957EB02C08743D0080E2FF /* Extension_UIAlertController.swift in Sources */,
+				D1957ED52C0B57E80080E2FF /* SeparatorTableViewCell.swift in Sources */,
 				D1957EAE2C086E580080E2FF /* MapViewController.swift in Sources */,
 				D12E3C4F2C009C1A002B7634 /* RestaurantTableViewCell.swift in Sources */,
 				D12E3C4B2C0099E8002B7634 /* RestaurantTableViewController.swift in Sources */,
