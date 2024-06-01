@@ -10,8 +10,11 @@ import UIKit
 class ChatViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var messageTextView: UITextView!
     
     var data: ChatRoom?
+    
+    let placeholder = "메세지를 입력하세요"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +22,22 @@ class ChatViewController: UIViewController {
         configureNavi(title: data!.chatroomName)
         addSeparatorCell()
         configureTableView()
+        configureTextView()
         
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             tableView.scrollToRow(at: IndexPath(row: data!.chatList.count - 1, section: 0), at: .bottom, animated: false)
         }
+    }
+    
+    func configureTextView() {
+        messageTextView.delegate = self
+        messageTextView.backgroundColor = .lightGray.withAlphaComponent(0.2)
+        messageTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 0, right: 8)
+        messageTextView.clipsToBounds = true
+        messageTextView.layer.cornerRadius = 5
+        messageTextView.text = placeholder
+        messageTextView.textColor = .lightGray
     }
     
     func addSeparatorCell() {
@@ -59,6 +73,22 @@ class ChatViewController: UIViewController {
         tableView.separatorStyle = .none
     }
     
+}
+
+extension ChatViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholder
+            textView.textColor = .lightGray
+        }
+    }
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
