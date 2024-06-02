@@ -43,7 +43,7 @@ class ChatViewController: UIViewController {
     }
     
     @objc func sendButtonTapped() {
-        if messageTextView.textColor == .black {
+        if messageTextView.textColor == .black && messageTextView.text.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm"
             let dateString = formatter.string(from: Date())
