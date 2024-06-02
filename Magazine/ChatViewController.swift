@@ -33,7 +33,7 @@ class ChatViewController: UIViewController {
     func configureTextView() {
         messageTextView.delegate = self
         messageTextView.backgroundColor = .lightGray.withAlphaComponent(0.2)
-        messageTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 0, right: 8)
+        messageTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8)
         messageTextView.clipsToBounds = true
         messageTextView.layer.cornerRadius = 5
         messageTextView.text = placeholder
@@ -87,6 +87,23 @@ extension ChatViewController: UITextViewDelegate {
         if textView.text.isEmpty {
             textView.text = placeholder
             textView.textColor = .lightGray
+        }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let minHeight: CGFloat = 48
+        let maxHeight: CGFloat = 88
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach {
+            if estimatedSize.height <= minHeight {
+                $0.constant = minHeight
+            } else if estimatedSize.height <= maxHeight {
+                $0.constant = estimatedSize.height
+            } else {
+                $0.constant = maxHeight
+            }
         }
     }
 }
