@@ -105,6 +105,7 @@ extension ChatViewController: UITextViewDelegate {
             textView.text = nil
             textView.textColor = .black
         }
+        showTableViewBottom()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -145,17 +146,20 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             if data.date == "dayChange" {
                 let cell = tableView.dequeueReusableCell(withIdentifier: SeparatorTableViewCell.identifier, for: indexPath) as! SeparatorTableViewCell
                 cell.configure(data: data)
+                cell.selectionStyle = .none
                 
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: MyChatTableViewCell.identifier, for: indexPath) as! MyChatTableViewCell
                 cell.configure(data: data)
+                cell.selectionStyle = .none
                 
                 return cell
             }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: OtherChatTableViewCell.identifier, for: indexPath) as! OtherChatTableViewCell
             cell.configure(data: data)
+            cell.selectionStyle = .none
             
             return cell
         }

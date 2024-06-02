@@ -411,11 +411,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GiA-Sa-2Ia">
-                                <rect key="frame" x="0.0" y="59" width="393" height="671"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="메세지를 입력하세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ex5-S5-0hU">
-                                <rect key="frame" x="20" y="770" width="353" height="48"/>
+                                <rect key="frame" x="20" y="762" width="353" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="E5a-D7-DXD"/>
@@ -425,7 +425,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-2J-v86">
-                                <rect key="frame" x="335" y="779" width="30" height="30"/>
+                                <rect key="frame" x="335" y="771" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MpJ-gB-2Bv"/>
                                     <constraint firstAttribute="width" constant="30" id="nds-lF-b2f"/>
@@ -435,13 +435,14 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nq3-qJ-vga"/>
+                        <keyboardLayoutGuide key="keyboard" id="YgD-Kc-hTi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ex5-S5-0hU" firstAttribute="trailing" secondItem="YGD-2J-v86" secondAttribute="trailing" constant="8" id="2ax-WP-eWq"/>
                             <constraint firstItem="nq3-qJ-vga" firstAttribute="trailing" secondItem="GiA-Sa-2Ia" secondAttribute="trailing" id="65k-34-9up"/>
-                            <constraint firstItem="Ex5-S5-0hU" firstAttribute="bottom" secondItem="nq3-qJ-vga" secondAttribute="bottom" id="IAJ-us-qjQ"/>
+                            <constraint firstItem="Ex5-S5-0hU" firstAttribute="bottom" secondItem="YgD-Kc-hTi" secondAttribute="top" constant="-8" id="IAJ-us-qjQ"/>
                             <constraint firstItem="GiA-Sa-2Ia" firstAttribute="top" secondItem="nq3-qJ-vga" secondAttribute="top" id="Z2X-r4-s3M"/>
-                            <constraint firstItem="nq3-qJ-vga" firstAttribute="bottom" secondItem="GiA-Sa-2Ia" secondAttribute="bottom" constant="88" id="Z6d-93-4yd"/>
+                            <constraint firstItem="YgD-Kc-hTi" firstAttribute="top" secondItem="GiA-Sa-2Ia" secondAttribute="bottom" constant="96" id="Z6d-93-4yd"/>
                             <constraint firstItem="GiA-Sa-2Ia" firstAttribute="leading" secondItem="nq3-qJ-vga" secondAttribute="leading" id="bjA-Fa-vkw"/>
                             <constraint firstItem="YGD-2J-v86" firstAttribute="centerY" secondItem="Ex5-S5-0hU" secondAttribute="centerY" id="o5w-JF-Mfw"/>
                             <constraint firstItem="Ex5-S5-0hU" firstAttribute="leading" secondItem="nq3-qJ-vga" secondAttribute="leading" constant="20" id="rkM-2Z-lrh"/>

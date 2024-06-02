@@ -54,6 +54,7 @@ extension TravelTalkViewController: UITableViewDelegate {
         let vc = storyboard?.instantiateViewController(identifier: ChatViewController.identifier) as! ChatViewController
         vc.data = data
         navigationController?.pushViewController(vc, animated: true)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
 
