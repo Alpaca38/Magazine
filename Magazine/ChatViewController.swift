@@ -11,6 +11,7 @@ class ChatViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var messageTextView: UITextView!
+    @IBOutlet var sendButton: UIButton!
     
     var data: ChatRoom?
     
@@ -23,6 +24,7 @@ class ChatViewController: UIViewController {
         addSeparatorCell()
         configureTableView()
         configureTextView()
+        configureButton()
         
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
@@ -30,10 +32,20 @@ class ChatViewController: UIViewController {
         }
     }
     
+    func configureButton() {
+        sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        sendButton.tintColor = .lightGray
+        sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func sendButtonTapped() {
+        
+    }
+    
     func configureTextView() {
         messageTextView.delegate = self
         messageTextView.backgroundColor = .lightGray.withAlphaComponent(0.2)
-        messageTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8)
+        messageTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 38)
         messageTextView.clipsToBounds = true
         messageTextView.layer.cornerRadius = 5
         messageTextView.text = placeholder
