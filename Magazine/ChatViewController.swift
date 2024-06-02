@@ -25,7 +25,11 @@ class ChatViewController: UIViewController {
         configureTableView()
         configureTextView()
         configureButton()
+        showTableViewBottom()
         
+    }
+    
+    func showTableViewBottom() {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
             tableView.scrollToRow(at: IndexPath(row: data!.chatList.count - 1, section: 0), at: .bottom, animated: false)
@@ -39,7 +43,15 @@ class ChatViewController: UIViewController {
     }
     
     @objc func sendButtonTapped() {
-        
+        if messageTextView.textColor == .black {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let dateString = formatter.string(from: Date())
+            data!.chatList.append(Chat(user: User.user, date: dateString, message: messageTextView.text))
+            messageTextView.text = nil
+            tableView.reloadData()
+            showTableViewBottom()
+        }
     }
     
     func configureTextView() {
