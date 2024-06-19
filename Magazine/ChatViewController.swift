@@ -26,8 +26,8 @@ class ChatViewController: UIViewController {
         configureTextView()
         configureButton()
         showTableViewBottom()
-        
     }
+
     
     func showTableViewBottom() {
         DispatchQueue.main.async { [weak self] in
